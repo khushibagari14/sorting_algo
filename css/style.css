@@ -1,0 +1,251 @@
+/* Base reset and font setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: none;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #2b2b2b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .array-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .array-inputs select,
+nav .array-inputs input,
+nav .array-inputs button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+nav .array-inputs button:hover {
+  background-color: #0078d4;
+  cursor: pointer;
+}
+
+nav .header_right {
+  text-align: right;
+  flex: 1;
+}
+
+nav .header_right .nav-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+nav .header_right .algos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+nav .header_right .algos button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+nav .header_right .algos button:hover {
+  background-color: #0078d4;
+  color: white;
+}
+
+.butt_selected {
+  background-color: white !important;
+  color: #0078d4 !important;
+  font-weight: bold;
+}
+
+.butt_locked,
+.butt_locked:hover {
+  background-color: #555;
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+/* MAIN SECTION */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+#array_container {
+  width: 100%;
+  max-width: 900px;
+  height: 60vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* Info sections side by side */
+.Complexity_Containers {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Time/Space block container (left side) */
+#Info_Cont1 {
+  flex: 1 1 45%;
+  order: 1;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Time and Space blocks inside Info_Cont1 */
+#Info_Cont1 .time-space-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#Info_Cont1 .time-block,
+#Info_Cont1 .space-block {
+  flex: 1 1 45%;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Headings */
+#Info_Cont1 h3,
+#Info_Cont2 h3 {
+  text-decoration: underline;
+  color: #0078d4;
+  margin-bottom: 1rem;
+}
+
+.Pair_Definitions {
+  margin-top: 1rem;
+}
+
+.Pair_Definitions p {
+  display: inline;
+  font-size: 14px;
+}
+
+.Pair_Definitions p.Sub_Heading {
+  font-size: 15px;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Hidden class */
+.hide {
+  display: none !important;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .array-inputs {
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  nav .header_right {
+    text-align: left;
+    width: 100%;
+  }
+
+  nav .header_right .algos {
+    justify-content: flex-start;
+  }
+
+  #array_container {
+    height: 50vh;
+    padding: 0.5rem;
+  }
+
+  .Complexity_Containers {
+    flex-direction: column;
+  }
+
+  #Info_Cont1,
+  #Info_Cont2 {
+    flex: 1 1 100%;
+    order: unset;
+    padding: 1rem;
+  }
+
+  #Info_Cont1 .time-space-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .header_right .nav-heading {
+    font-size: 1.5rem;
+  }
+
+  nav .header_right .algos button {
+    font-size: 12px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  nav .array-inputs select,
+  nav .array-inputs input,
+  nav .array-inputs button {
+    font-size: 12px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  #array_container {
+    height: 40vh;
+  }
+}
