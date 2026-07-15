@@ -1,3 +1,7 @@
+<h1 align="center">📊 Sorting Visualizer</h1>
+<p align="center">
+Interactive visualization of sorting algorithms using JavaScript.
+</p>
 # 🚀 Sorting Visualizer
 
 An interactive web application that helps users understand how different sorting algorithms work through beautiful real-time animations.
@@ -20,10 +24,7 @@ An interactive web application that helps users understand how different sorting
 - HTML5
 - CSS3
 - JavaScript
-
-## 📸 Preview
-Add screenshots or GIFs here.
-
+  
 ## 🎯 Future Enhancements
 - Dark Mode Support
 - Heap Sort & Radix Sort
